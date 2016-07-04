@@ -1,0 +1,28 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:name="http://www.pb.com/spectrum/services/name_matching_svc_dps_name_parsing">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <name:name_matching_svc_dps_name_parsingRequest>
+         <!--Optional:-->
+         <name:options/>
+         <!--Optional:-->
+         <name:Input>
+            <!--Zero or more repetitions:-->
+            <name:Row>
+               <!--You may enter the following 3 items in any order-->
+               <!--Optional:-->
+               <name:key>ZZZZ</name:key>
+               <!--Optional:-->
+               <name:Name>TARIQ AHMAD</name:Name>
+               <!--Optional:-->
+               <name:user_fields>
+                  <!--Zero or more repetitions:-->
+                  <name:user_field>
+                     <name:name>?</name:name>
+                     <name:value>?</name:value>
+                  </name:user_field>
+               </name:user_fields>
+            </name:Row>
+         </name:Input>
+      </name:name_matching_svc_dps_name_parsingRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,403 @@
+<!--Exported Tue Jun 28 17:22:11 IST 2016 by admin from PUITESTING-W1--><exportedDataflow schema_version="9.0"><exposed>false</exposed><dataflow id="name_matching_svc_dps_name_parsing" schema_version="9.0" version=""><product_group/><channels><channel id="f18a713a-fc7f-41a4-a9c9-c439356621d0"><field_transformers/></channel><channel id="33f05704-98ef-498a-882e-605c3b268971"><field_transformers/></channel><channel id="c8b697c4-8cd6-44a1-b1bd-eb3dc80300f9"><field_transformers/></channel><channel id="7d6fde16-8e9a-48c3-b569-c015718fbd0c"><field_transformers/></channel><channel id="13483f52-85c9-40b0-a240-306cec88f06c"><field_transformers/></channel><channel id="51a219bf-9ea5-4275-b5eb-33d5b189cf32"><field_transformers/></channel><channel id="5a995ebc-73ad-4e32-989d-73bf69080e53"><field_transformers/></channel><channel id="efed0447-8c10-4a9a-9ee9-e89018ece314"><field_transformers/></channel><channel id="3b8e777f-888c-4fcd-b9ca-f5b42c120976"><field_transformers/></channel><channel id="96019f85-e769-40a0-9c65-507bb2562303"><field_transformers/></channel></channels><created_by>admin</created_by><created_date>5/17/16 3:05 PM</created_date><service_exposures><soap_service_exposure/><rest_service_exposure><base_path/><resources><resource><method>GET</method><input_adapter/><output_adapter>XML</output_adapter><qualifier_path>results.xml</qualifier_path></resource><resource><method>GET</method><input_adapter/><output_adapter>JSON</output_adapter><qualifier_path>results.json</qualifier_path></resource></resources></rest_service_exposure></service_exposures><icon/><inputs><input id="c7c8d61d-5263-43c7-bfd4-eba31ddbd9c4"><metadata><name>Row</name><field><name>key</name><required>false</required><type>string</type></field><field><name>Name</name><required>false</required><type>string</type></field></metadata><label>Input</label><output_port id="c7062258-b9b3-4198-aa76-03840bee9d0b"><channel idref="7d6fde16-8e9a-48c3-b569-c015718fbd0c"/><label>output port</label><port_name>output_port</port_name></output_port><properties/></input></inputs><last_modified_by>admin</last_modified_by><last_modified_date>5/23/16 4:01 PM</last_modified_date><outputs><output id="0bc14427-974a-4b10-8b7f-c94363006c1f"><metadata><name>Row</name><field><name>Status</name><required>false</required><type>string</type></field><field><name>Status.Code</name><required>false</required><type>string</type></field><field><name>Status.Description</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.Score</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.IsMatch</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.FirstName.Score</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.FirstName.IsMatch</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.LastName.Score</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.LastName.IsMatch</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.MiddleName.Score</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.MiddleName.IsMatch</name><required>false</required><type>string</type></field><field><name>MatchInfo</name><required>false</required><type>string</type></field><field><name>HasDuplicates</name><required>false</required><type>string</type></field><field><name>MatchScore</name><required>false</required><type>string</type></field><field><name>MatchRecordType</name><required>false</required><type>string</type></field><field><name>key</name><required>false</required><type>string</type></field><field><name>Name</name><required>false</required><type>string</type></field><field><name>IsPersonal</name><required>false</required><type>string</type></field><field><name>IsFirm</name><required>false</required><type>string</type></field><field><name>FirmConjunction</name><required>false</required><type>string</type></field><field><name>FirstName</name><required>false</required><type>string</type></field><field><name>MiddleName</name><required>false</required><type>string</type></field><field><name>LastName</name><required>false</required><type>string</type></field><field><name>FirmName</name><required>false</required><type>string</type></field><field><name>FirmSuffix</name><required>false</required><type>string</type></field><field><name>address</name><required>false</required><type>string</type></field><field><name>CandidateGroup</name><required>false</required><type>string</type></field><field><name>TransactionRecordType</name><required>false</required><type>string</type></field><field><name>CultureCode</name><required>false</required><type>string</type></field><field><name>CultureCodeUsedToParse</name><required>false</required><type>string</type></field><field><name>NameScore</name><required>false</required><type>integer</type></field><field><name>AccountDescription</name><required>false</required><type>string</type></field><field><name>LeadingData</name><required>false</required><type>string</type></field><field><name>TrailingData</name><required>false</required><type>string</type></field><field><name>Conjunction</name><required>false</required><type>string</type></field><field><name>TitleOfRespect</name><required>false</required><type>string</type></field><field><name>SecondaryLastName</name><required>false</required><type>string</type></field><field><name>MaturitySuffix</name><required>false</required><type>string</type></field><field><name>GeneralSuffix</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.FirmName.Score</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.FirmName.IsMatch</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.FirmSuffix.Score</name><required>false</required><type>string</type></field><field><name>MatchInfo.New_Type.FirmSuffix.IsMatch</name><required>false</required><type>string</type></field></metadata><input_port id="608e1b81-5793-4c2e-8f27-5f485a2442c2"><channel idref="96019f85-e769-40a0-9c65-507bb2562303"/><label>input port</label><port_name>input_port</port_name></input_port><label>Output</label><properties/></output></outputs><properties><property><name>ViewData</name><value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<viewData version="3.0">
+  <canvasNode id="a62749b3-7f77-4b5b-b2af-bf945cc732e4">
+    <location x="482.2871" y="275" />
+  </canvasNode>
+  <canvasNode id="8e631f55-95b5-48a8-a0d1-c74bb36159f6">
+    <location x="748" y="64" />
+  </canvasNode>
+  <canvasNode id="5ef37182-017f-4aa0-8d20-0edc21520372">
+    <location x="1112.287" y="259" />
+  </canvasNode>
+  <canvasNode id="61bb7414-87fc-48ac-b311-d0c01ffa392d">
+    <location x="861.2871" y="372" />
+  </canvasNode>
+  <canvasNode id="edd34969-bccd-43b0-9246-89d5f061d00e">
+    <location x="624.2871" y="373" />
+  </canvasNode>
+  <canvasNode id="0bc14427-974a-4b10-8b7f-c94363006c1f">
+    <location x="1250" y="259" />
+  </canvasNode>
+  <canvasNode id="39764f1b-a4da-42c7-a8d3-2af166758a52">
+    <location x="289" y="271" />
+  </canvasNode>
+  <canvasNode id="60e22d68-2adb-42b5-bce3-2b54747ad59d">
+    <location x="870" y="131" />
+  </canvasNode>
+  <canvasNode id="c7c8d61d-5263-43c7-bfd4-eba31ddbd9c4">
+    <location x="85" y="267" />
+  </canvasNode>
+  <canvasNode id="e0a085e1-87bc-453d-ada9-e7e39ab484cd">
+    <location x="617" y="129" />
+  </canvasNode>
+  <canvasLink fromPortID="4e9953b2-e547-434a-b9be-ceaf50963faf" toPortID="b832ded0-4bdd-4837-9b28-d5b6b3be88d6" />
+  <canvasLink fromPortID="8f5da770-2d0c-41a4-8876-250be4387a63" toPortID="3df63abb-4e86-468a-bb75-e24023d7e601" />
+  <canvasLink fromPortID="8c514a23-626d-4bdc-8438-475e8aee03fb" toPortID="191db8e7-9353-4ee2-b9f8-a4858be349c7" />
+  <canvasLink fromPortID="d7eeb279-baf4-4955-a2a1-83acf8023463" toPortID="36e3b244-4d2b-4007-aa70-8ab7839087dd" />
+  <canvasLink fromPortID="45a3ab3c-2320-4da1-8dcd-25fab451901c" toPortID="b3fab3e6-c1cd-454f-8653-fab0f5a065b6" />
+  <canvasLink fromPortID="7082a39a-687d-4cf2-9896-21caee2f565b" toPortID="7180ff87-8d05-47a5-9734-47ae899899ff" />
+  <canvasLink fromPortID="519b416a-e254-47db-b07e-968abea6007a" toPortID="aa7e1986-2fa1-4923-a3b8-f2d310304303" />
+  <canvasLink fromPortID="25dad7c4-9777-43ed-b03e-ea45f7454044" toPortID="608e1b81-5793-4c2e-8f27-5f485a2442c2" />
+  <canvasLink fromPortID="afa051e6-44dd-43d4-b91c-f053fe9fb8db" toPortID="c12bb2d2-de8e-4b72-89d8-ee8d8608529c" />
+  <canvasLink fromPortID="c7062258-b9b3-4198-aa76-03840bee9d0b" toPortID="6cceaacc-f785-4c75-bce2-1cdf3225fb70" />
+</viewData>]]></value></property></properties><stages><stage id="edd34969-bccd-43b0-9246-89d5f061d00e"><stage_name>CandidateFinder</stage_name><stage_version/><label>Candidate Finder 2</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16" standalone="yes"?><CandidateFinderStageSettings xmlns="http://g1.com/cdq/schema/candidatefinder-settings.xsd"><candidate-finder type="searchindex" name="searchindex"><indexSearchConfiguration><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<searchConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <indexName>nameaddressdata_nameparsing</indexName>
+  <maxHits>1000</maxHits>
+  <startIndex>1</startIndex>
+  <ignoreExtraTerms>true</ignoreExtraTerms>
+  <isReturnMatchCount>false</isReturnMatchCount>
+  <outputFields>
+    <outputField>
+      <stageField>
+        <name>key</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>key</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>Name</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>Name</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>IsPersonal</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>IsPersonal</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>IsFirm</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>IsFirm</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirmConjunction</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirmConjunction</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirstName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirstName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>MiddleName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>MiddleName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>LastName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>LastName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirmName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirmName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirmSuffix</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirmSuffix</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>address</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>address</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+  </outputFields>
+  <searchQuery>
+    <queryName>New Type</queryName>
+    <searchQueries>
+      <prefixSearchQuery>
+        <boost>1</boost>
+        <firstSearchField>
+          <name>key</name>
+          <type>string</type>
+        </firstSearchField>
+        <indexFieldName>key</indexFieldName>
+      </prefixSearchQuery>
+    </searchQueries>
+    <operator>and</operator>
+  </searchQuery>
+</searchConfiguration>]]]]><![CDATA[></indexSearchConfiguration></candidate-finder></CandidateFinderStageSettings>]]></settings><input_ports><input_port id="b3fab3e6-c1cd-454f-8653-fab0f5a065b6"><channel idref="3b8e777f-888c-4fcd-b9ca-f5b42c120976"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="7082a39a-687d-4cf2-9896-21caee2f565b"><channel idref="f18a713a-fc7f-41a4-a9c9-c439356621d0"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[CandidateFinder]]></value></property></properties></stage><stage id="60e22d68-2adb-42b5-bce3-2b54747ad59d"><stage_name>TransactionalMatcher</stage_name><stage_version/><label>Transactional Match</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16" standalone="yes"?><CompositeSettings xmlns="http://g1.com/cdq/schema/transactionalmatch-settings.xsd"><Name value="Custom - NameMatch" /><MatcherSettings><MatchAnalysis>False</MatchAnalysis><GenerateMatchInfo>true</GenerateMatchInfo><OutputDetailedMatchInfo>True</OutputDetailedMatchInfo><OutputUniqueCandidates>False</OutputUniqueCandidates><CustomMatchRule>True</CustomMatchRule><MatcherRuleType><type name="NameMatch" id="18" isroot="True" isleaf="False" parentid="18" haschildren="True"><type name="FirstName" id="19" isroot="False" isleaf="True" parentid="18" haschildren="False" /><type name="LastName" id="20" isroot="False" isleaf="True" parentid="18" haschildren="False" /></type></MatcherRuleType><MatcherRuleSettings><settings typename="NameMatch" typeid="18" matchingmethod="BASED_ON_THRESHOLD" threshold="95" scoringmethod="MAX" weight="0" missingdata="IGNORE_BLANKS" matchWhenNotTrue="False" /><settings typename="FirstName" typeid="19" matchingmethod="BASED_ON_THRESHOLD" threshold="95" scoringmethod="MAX" weight="0" missingdata="COUNT_AS_0" matchWhenNotTrue="False"><algorithms><algorithm name="JARO_WINKLER_DISTANCE" weight="0"><options /></algorithm></algorithms></settings><settings typename="LastName" typeid="20" matchingmethod="BASED_ON_THRESHOLD" threshold="95" scoringmethod="MAX" weight="0" missingdata="COUNT_AS_0" matchWhenNotTrue="False"><algorithms><algorithm name="JARO_WINKLER_DISTANCE" weight="0"><options /></algorithm></algorithms></settings></MatcherRuleSettings></MatcherSettings></CompositeSettings>]]></settings><input_ports><input_port id="191db8e7-9353-4ee2-b9f8-a4858be349c7"><channel idref="5a995ebc-73ad-4e32-989d-73bf69080e53"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options><option><name>MatchRule</name><value/></option><option><name>CustomMatchRule</name><value/></option><option><name>ReturnDetailedMatchInfo</name><value/></option><option><name>Threshold</name><value/></option></options><output_ports><output_port id="d7eeb279-baf4-4955-a2a1-83acf8023463"><channel idref="efed0447-8c10-4a9a-9ee9-e89018ece314"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[TransactionalMatcher]]></value></property></properties></stage><stage id="39764f1b-a4da-42c7-a8d3-2af166758a52"><stage_name>OpenNameParser</stage_name><stage_version/><label>Open Name Parser</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><input_ports><input_port id="6cceaacc-f785-4c75-bce2-1cdf3225fb70"><channel idref="7d6fde16-8e9a-48c3-b569-c015718fbd0c"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="afa051e6-44dd-43d4-b91c-f053fe9fb8db"><channel idref="c8b697c4-8cd6-44a1-b1bd-eb3dc80300f9"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[OpenNameParser]]></value></property></properties></stage><stage id="5ef37182-017f-4aa0-8d20-0edc21520372"><stage_name>collector</stage_name><stage_version/><label>Stream Combiner</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><input_ports><input_port id="36e3b244-4d2b-4007-aa70-8ab7839087dd"><channel idref="efed0447-8c10-4a9a-9ee9-e89018ece314"/><label>port</label><port_name/></input_port><input_port id="aa7e1986-2fa1-4923-a3b8-f2d310304303"><channel idref="33f05704-98ef-498a-882e-605c3b268971"/><label>port 2</label><port_name/></input_port></input_ports><options/><output_ports><output_port id="25dad7c4-9777-43ed-b03e-ea45f7454044"><channel idref="96019f85-e769-40a0-9c65-507bb2562303"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[collector]]></value></property></properties></stage><stage id="8e631f55-95b5-48a8-a0d1-c74bb36159f6"><stage_name>transformer</stage_name><stage_version/><label>Transformer</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<TransformerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.0">
+  <transformDefinitions>
+    <transformDefinition>
+      <name>Custom</name>
+      <script>if (row.get('Name') == 'NULL')
+{
+        row.set('Name', '')
+   
+}
+ 
+if (row.get('MiddleName') == 'NULL')
+{
+        row.set('MiddleName', '')
+   
+}
+ 
+ 
+if (row.get('LastName') == 'NULL')
+{
+        row.set('LastName', '')
+   
+}
+ 
+ 
+if (row.get('FirstName') == 'NULL')
+{
+        row.set('FirstName', '')
+   
+}</script>
+      <transformParameters>
+        <transformParameter>
+          <name>transformName</name>
+          <type>string</type>
+          <value>Custom Transform</value>
+        </transformParameter>
+      </transformParameters>
+      <transformFields />
+    </transformDefinition>
+  </transformDefinitions>
+</TransformerSettings>]]></settings><input_ports><input_port id="3df63abb-4e86-468a-bb75-e24023d7e601"><channel idref="13483f52-85c9-40b0-a240-306cec88f06c"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="8c514a23-626d-4bdc-8438-475e8aee03fb"><channel idref="5a995ebc-73ad-4e32-989d-73bf69080e53"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[transformer]]></value></property></properties></stage><stage id="61bb7414-87fc-48ac-b311-d0c01ffa392d"><stage_name>TransactionalMatcher</stage_name><stage_version/><label>Transactional Match 2</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16" standalone="yes"?><CompositeSettings xmlns="http://g1.com/cdq/schema/transactionalmatch-settings.xsd"><Name value="Custom - New Type" /><MatcherSettings><MatchAnalysis>False</MatchAnalysis><GenerateMatchInfo>true</GenerateMatchInfo><OutputDetailedMatchInfo>False</OutputDetailedMatchInfo><OutputUniqueCandidates>False</OutputUniqueCandidates><CustomMatchRule>True</CustomMatchRule><MatcherRuleType><type name="New Type" id="13" isroot="True" isleaf="False" parentid="13" haschildren="True"><type name="FirmName" id="14" isroot="False" isleaf="True" parentid="13" haschildren="False" /><type name="FirmSuffix" id="15" isroot="False" isleaf="True" parentid="13" haschildren="False" /></type></MatcherRuleType><MatcherRuleSettings><settings typename="New Type" typeid="13" matchingmethod="ALL_TRUE" threshold="0" scoringmethod="AVG" weight="0" missingdata="IGNORE_BLANKS" matchWhenNotTrue="False" /><settings typename="FirmName" typeid="14" matchingmethod="BASED_ON_THRESHOLD" threshold="100" scoringmethod="MAX" weight="0" missingdata="IGNORE_BLANKS" matchWhenNotTrue="False"><algorithms><algorithm name="EXACT_MATCH" weight="0"><options /></algorithm></algorithms></settings><settings typename="FirmSuffix" typeid="15" matchingmethod="BASED_ON_THRESHOLD" threshold="100" scoringmethod="MAX" weight="0" missingdata="IGNORE_BLANKS" matchWhenNotTrue="False"><algorithms><algorithm name="EXACT_MATCH" weight="0"><options /></algorithm></algorithms></settings></MatcherRuleSettings></MatcherSettings></CompositeSettings>]]></settings><input_ports><input_port id="7180ff87-8d05-47a5-9734-47ae899899ff"><channel idref="f18a713a-fc7f-41a4-a9c9-c439356621d0"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options><option><name>MatchRule</name><value/></option><option><name>CustomMatchRule</name><value/></option><option><name>ReturnDetailedMatchInfo</name><value/></option><option><name>Threshold</name><value/></option></options><output_ports><output_port id="519b416a-e254-47db-b07e-968abea6007a"><channel idref="33f05704-98ef-498a-882e-605c3b268971"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[TransactionalMatcher]]></value></property></properties></stage><stage id="e0a085e1-87bc-453d-ada9-e7e39ab484cd"><stage_name>CandidateFinder</stage_name><stage_version/><label>Candidate Finder</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16" standalone="yes"?><CandidateFinderStageSettings xmlns="http://g1.com/cdq/schema/candidatefinder-settings.xsd"><candidate-finder type="searchindex" name="searchindex"><indexSearchConfiguration><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<searchConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <indexName>nameaddressdata_nameparsing1</indexName>
+  <maxHits>1000</maxHits>
+  <startIndex>1</startIndex>
+  <ignoreExtraTerms>true</ignoreExtraTerms>
+  <isReturnMatchCount>false</isReturnMatchCount>
+  <outputFields>
+    <outputField>
+      <stageField>
+        <name>key</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>key</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>Name</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>Name</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>IsPersonal</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>IsPersonal</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>IsFirm</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>IsFirm</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirstName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirstName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>MiddleName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>MiddleName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>LastName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>LastName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirmName</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirmName</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>FirmSuffix</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>FirmSuffix</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+    <outputField>
+      <stageField>
+        <name>Address</name>
+        <type>string</type>
+      </stageField>
+      <storedField>
+        <name>Address</name>
+        <type>string</type>
+      </storedField>
+    </outputField>
+  </outputFields>
+  <searchQuery>
+    <queryName>New Type</queryName>
+    <searchQueries>
+      <exactMatchSearchQuery>
+        <boost>1</boost>
+        <firstSearchField>
+          <name>key</name>
+          <type>string</type>
+        </firstSearchField>
+        <indexFieldName>key</indexFieldName>
+      </exactMatchSearchQuery>
+    </searchQueries>
+    <operator>and</operator>
+  </searchQuery>
+</searchConfiguration>]]]]><![CDATA[></indexSearchConfiguration></candidate-finder></CandidateFinderStageSettings>]]></settings><input_ports><input_port id="b832ded0-4bdd-4837-9b28-d5b6b3be88d6"><channel idref="51a219bf-9ea5-4275-b5eb-33d5b189cf32"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="8f5da770-2d0c-41a4-8876-250be4387a63"><channel idref="13483f52-85c9-40b0-a240-306cec88f06c"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[CandidateFinder]]></value></property></properties></stage><stage id="a62749b3-7f77-4b5b-b2af-bf945cc732e4"><stage_name>router</stage_name><stage_version/><label>Conditional Router</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<RouterSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.5">
+  <outputCopy>false</outputCopy>
+  <singleOutput>false</singleOutput>
+  <portExpressions>
+    <portExpression>
+      <portId>4e9953b2-e547-434a-b9be-ceaf50963faf</portId>
+      <expression>return isEqualTo(data.get('IsPersonal'), 'True');
+      
+import static com.pb.spectrum.api.datetime.DateTimeUtil.*;
+
+def boolean isEqualTo(Object field, Object value)
+{
+  try
+  {
+    if(field instanceof BigDecimal)
+      return new BigDecimal(value) == field
+    if(field instanceof Boolean)
+      return Boolean.valueOf(value) == field
+    else if(field instanceof Integer)
+      return Integer.valueOf(value) == field
+    else if(field instanceof Long)
+      return Long.valueOf(value) == field
+    else if(field instanceof Float)
+      return Float.valueOf(value) == field
+    else if(field instanceof Double)
+      return Double.valueOf(value) == field
+    else if(field instanceof com.pb.spectrum.api.datetime.Date)
+      return compare(field, com.pb.spectrum.api.datetime.Date.valueOf(value)) == 0
+    else if(field instanceof com.pb.spectrum.api.datetime.Time)
+      return compare(field, com.pb.spectrum.api.datetime.Time.valueOf(value)) == 0
+    else if(field instanceof com.pb.spectrum.api.datetime.DateTime)
+      return compare(field, com.pb.spectrum.api.datetime.DateTime.valueOf(value)) == 0
+    return value == field;   
+  }
+  catch (Exception)
+  {
+    return false;
+  }	
+}
+    </expression>
+      <ViewData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ExpressionBuilderInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;CombineMethod&gt;All&lt;/CombineMethod&gt;
+  &lt;ExpressionDetailInfo&gt;
+    &lt;ExpressionDetails&gt;
+      &lt;ExpressionField&gt;IsPersonal&lt;/ExpressionField&gt;
+      &lt;ExpressionOperator&gt;is equal to&lt;/ExpressionOperator&gt;
+      &lt;ExpressionValue&gt;True&lt;/ExpressionValue&gt;
+      &lt;comparisonType&gt;VALUE&lt;/comparisonType&gt;
+    &lt;/ExpressionDetails&gt;
+  &lt;/ExpressionDetailInfo&gt;
+&lt;/ExpressionBuilderInfo&gt;</ViewData>
+    </portExpression>
+    <portExpression>
+      <portId>45a3ab3c-2320-4da1-8dcd-25fab451901c</portId>
+      <expression>default</expression>
+      <ViewData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ExpressionBuilderInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;CombineMethod /&gt;
+  &lt;ExpressionDetailInfo /&gt;
+&lt;/ExpressionBuilderInfo&gt;</ViewData>
+    </portExpression>
+  </portExpressions>
+</RouterSettings>]]></settings><input_ports><input_port id="c12bb2d2-de8e-4b72-89d8-ee8d8608529c"><channel idref="c8b697c4-8cd6-44a1-b1bd-eb3dc80300f9"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="4e9953b2-e547-434a-b9be-ceaf50963faf"><channel idref="51a219bf-9ea5-4275-b5eb-33d5b189cf32"/><label>port</label><port_name/></output_port><output_port id="45a3ab3c-2320-4da1-8dcd-25fab451901c"><channel idref="3b8e777f-888c-4fcd-b9ca-f5b42c120976"/><label>port 2</label><port_name/></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[router]]></value></property></properties></stage></stages><reports/><notifications/><dataflow_options/><type>1</type><vendor/></dataflow></exportedDataflow>

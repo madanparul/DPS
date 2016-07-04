@@ -1,0 +1,1 @@
+http://config629vm1:8080/soap/name_matching_svc_dps_name_parsing?wsdl

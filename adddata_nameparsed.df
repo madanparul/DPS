@@ -1,0 +1,332 @@
+<!--Exported Tue Jun 28 17:22:06 IST 2016 by admin from PUITESTING-W1--><exportedDataflow schema_version="9.0"><exposed>false</exposed><dataflow id="adddata_nameparsed" schema_version="9.0" version=""><product_group/><channels><channel id="c7375bad-ef14-45d5-94e9-80873a185ae4"><field_transformers><field_transformer><name>converter</name><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<ConverterFieldTransformerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://transformer.g1.com/converter">
+  <fieldName xmlns="">IsPersonal</fieldName>
+  <fromType xmlns="">boolean</fromType>
+  <toType xmlns="">string</toType>
+</ConverterFieldTransformerSettings>]]></settings></field_transformer><field_transformer><name>converter</name><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<ConverterFieldTransformerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://transformer.g1.com/converter">
+  <fieldName xmlns="">IsFirm</fieldName>
+  <fromType xmlns="">boolean</fromType>
+  <toType xmlns="">string</toType>
+</ConverterFieldTransformerSettings>]]></settings></field_transformer></field_transformers></channel><channel id="757ae293-4fda-4436-8ef8-dced53760fb9"><field_transformers/></channel><channel id="e17beada-6167-4cf3-b8ca-bc36e7c3b789"><field_transformers/></channel></channels><created_by>admin</created_by><created_date>5/17/16 2:58 PM</created_date><service_exposures/><icon/><inputs/><last_modified_by>admin</last_modified_by><last_modified_date>5/23/16 5:13 PM</last_modified_date><outputs/><properties><property><name>ViewData</name><value><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<viewData version="3.0">
+  <canvasNode id="52a9ef9a-6e6e-41aa-baba-a0d6a5780bd5">
+    <location x="210" y="329" />
+  </canvasNode>
+  <canvasNode id="e5db7512-58ca-4f73-aec2-72bfdf52d871">
+    <location x="413.7656" y="228.9088" />
+  </canvasNode>
+  <canvasNode id="4801d0f6-1a14-4e57-8d49-92eb74f58fd1">
+    <location x="614" y="324" />
+  </canvasNode>
+  <canvasNode id="1622f348-7806-4e24-841a-bba745ad919f">
+    <location x="818" y="238" />
+  </canvasNode>
+  <canvasLink fromPortID="e46f95c3-bb8a-4d5e-8137-67b026a23504" toPortID="40968816-0160-4beb-a4f4-e55f10376319" />
+  <canvasLink fromPortID="ec859f60-3bb0-42f6-a86f-50868403469b" toPortID="d70855f7-a1ec-4386-80ba-1fac260c6d45" />
+  <canvasLink fromPortID="1298ad01-e7c5-475d-93bb-810c275bf861" toPortID="37ba7c5d-e0b2-45ed-9506-ad8bdd4320fc" />
+</viewData>]]></value></property></properties><stages><stage id="52a9ef9a-6e6e-41aa-baba-a0d6a5780bd5"><stage_name>source</stage_name><stage_version/><label>Read from File</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<SourceSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2.5">
+  <firstRecordNumber>1</firstRecordNumber>
+  <maxRows>0</maxRows>
+  <dataSourceMetadata>
+    <CSVMetadata>
+      <encoding>UTF-8</encoding>
+      <host />
+      <path>D:/Spectrum_db/inputdata/names_dpl.txt</path>
+      <port>-1</port>
+      <protocol>esclient</protocol>
+      <delimiter>007C</delimiter>
+      <textQualifier />
+      <skipFirstRow>false</skipFirstRow>
+      <lineSeparator />
+      <strictlyEnforceColumnCount>true</strictlyEnforceColumnCount>
+      <fields>
+        <field>
+          <name>Name</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+        <field>
+          <name>Address</name>
+          <required>false</required>
+          <type>string</type>
+        </field>
+      </fields>
+    </CSVMetadata>
+  </dataSourceMetadata>
+  <trimColumns />
+  <sortColumns />
+</SourceSettings>]]></settings><input_ports/><options/><output_ports><output_port id="e46f95c3-bb8a-4d5e-8137-67b026a23504"><channel idref="757ae293-4fda-4436-8ef8-dced53760fb9"/><label>output_port</label><port_name>output_port</port_name></output_port><output_port id="b522bc18-486d-4651-9cae-cdf779a9dd48"><label>error_port</label><port_name>error_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value><![CDATA[IsRemote=F]]></value></property><property><name>stageItemName</name><value><![CDATA[fileSource]]></value></property></properties></stage><stage id="1622f348-7806-4e24-841a-bba745ad919f"><stage_name>indexsinkstage</stage_name><stage_version/><label>Write to Search Index</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<indexBuilderConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <indexName>nameaddressdata_nameparsing1</indexName>
+  <indexFields>
+    <indexFields>
+      <analyzed>true</analyzed>
+      <fieldanalyzer>Keyword</fieldanalyzer>
+      <indexFieldName>key</indexFieldName>
+      <name>key</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>Name</indexFieldName>
+      <name>Name</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>CultureCode</indexFieldName>
+      <name>CultureCode</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>CultureCodeUsedToParse</indexFieldName>
+      <name>CultureCodeUsedToParse</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>IsParsed</indexFieldName>
+      <name>IsParsed</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>IsPersonal</indexFieldName>
+      <name>IsPersonal</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>IsConjoined</indexFieldName>
+      <name>IsConjoined</name>
+      <stored>false</stored>
+      <type>boolean</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>IsReverseOrder</indexFieldName>
+      <name>IsReverseOrder</name>
+      <stored>false</stored>
+      <type>boolean</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>IsFirm</indexFieldName>
+      <name>IsFirm</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>NameScore</indexFieldName>
+      <name>NameScore</name>
+      <stored>false</stored>
+      <type>integer</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>AccountDescription</indexFieldName>
+      <name>AccountDescription</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>LeadingData</indexFieldName>
+      <name>LeadingData</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>TrailingData</indexFieldName>
+      <name>TrailingData</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>FirmConjunction</indexFieldName>
+      <name>FirmConjunction</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>Status</indexFieldName>
+      <name>Status</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>Status.Code</indexFieldName>
+      <name>Status.Code</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>Status.Description</indexFieldName>
+      <name>Status.Description</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>Conjunction</indexFieldName>
+      <name>Conjunction</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>TitleOfRespect</indexFieldName>
+      <name>TitleOfRespect</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>FirstName</indexFieldName>
+      <name>FirstName</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>MiddleName</indexFieldName>
+      <name>MiddleName</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>LastName</indexFieldName>
+      <name>LastName</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>SecondaryLastName</indexFieldName>
+      <name>SecondaryLastName</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>MaturitySuffix</indexFieldName>
+      <name>MaturitySuffix</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>GeneralSuffix</indexFieldName>
+      <name>GeneralSuffix</name>
+      <stored>false</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>FirmName</indexFieldName>
+      <name>FirmName</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>FirmSuffix</indexFieldName>
+      <name>FirmSuffix</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+    <indexFields>
+      <analyzed>false</analyzed>
+      <indexFieldName>Address</indexFieldName>
+      <name>Address</name>
+      <stored>true</stored>
+      <type>string</type>
+    </indexFields>
+  </indexFields>
+  <analyzerName />
+  <persistenceModel>0</persistenceModel>
+  <isUpdate>false</isUpdate>
+  <updateBlankFields>false</updateBlankFields>
+  <diskChunkSize>0</diskChunkSize>
+  <isBatchCommit>true</isBatchCommit>
+  <batchSize>5000</batchSize>
+  <indexWriteMode>OVERWRITE</indexWriteMode>
+</indexBuilderConfiguration>]]></settings><input_ports><input_port id="37ba7c5d-e0b2-45ed-9506-ad8bdd4320fc"><channel idref="c7375bad-ef14-45d5-94e9-80873a185ae4"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="99f62e9e-39e5-4ec1-86ac-d5b7e72b5267"><label>sink_error_port</label><port_name>sink_error_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[indexsinkstage]]></value></property></properties></stage><stage id="e5db7512-58ca-4f73-aec2-72bfdf52d871"><stage_name>OpenNameParser</stage_name><stage_version/><label>Open Name Parser</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><input_ports><input_port id="40968816-0160-4beb-a4f4-e55f10376319"><channel idref="757ae293-4fda-4436-8ef8-dced53760fb9"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options><option><name>BusinessNamesDomain</name><value>Name Parsing - Business Names</value></option><option><name>ParseNaturalOrderPersonalNames</name><value>true</value></option><option><name>NaturalOrderPersonalNamesDomain</name><value>Name Parsing - Natural Order Personal Names</value></option><option><name>ReverseOrderConjoinedPersonalNamesDomain</name><value>Name Parsing - Reverse Order Conjoined Personal Names</value></option><option><name>ShortcutThreshold</name><value>100</value></option><option><name>SplitConjoinedNames</name><value>False</value></option><option><name>NaturalOrderConjoinedPersonalNamesDomain</name><value>Name Parsing - Natural Order Conjoined Personal Names</value></option><option><name>ParseConjoinedNames</name><value>False</value></option><option><name>BusinessNamesPriority</name><value>5</value></option><option><name>ParseReverseOrderPersonalNames</name><value>true</value></option><option><name>NaturalOrderConjoinedPersonalNamesPriority</name><value>2</value></option><option><name>NaturalOrderPersonalNamesPriority</name><value>1</value></option><option><name>ParseBusinessNames</name><value>True</value></option><option><name>ReverseOrderPersonalNamesDomain</name><value>Name Parsing - Reverse Order Personal Names</value></option><option><name>OutputAsList</name><value>False</value></option><option><name>DefaultCulture</name><value/></option><option><name>ReverseOrderConjoinedPersonalNamesPriority</name><value>4</value></option><option><name>ReverseOrderPersonalNamesPriority</name><value>3</value></option></options><output_ports><output_port id="ec859f60-3bb0-42f6-a86f-50868403469b"><channel idref="e17beada-6167-4cf3-b8ca-bc36e7c3b789"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[OpenNameParser]]></value></property></properties></stage><stage id="4801d0f6-1a14-4e57-8d49-92eb74f58fd1"><stage_name>transformer</stage_name><stage_version/><label>Transformer</label><num_instances>1</num_instances><distributed>false</distributed><batch_size>10000</batch_size><settings><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<TransformerSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="3.0">
+  <transformDefinitions>
+    <transformDefinition>
+      <name>Template</name>
+      <script>row.set('key','ZZZZ');</script>
+      <transformParameters>
+        <transformParameter>
+          <name>FieldTemplate</name>
+          <type>string</type>
+          <value>ZZZZ</value>
+        </transformParameter>
+        <transformParameter>
+          <name>outputColumn</name>
+          <type>string</type>
+          <value>key</value>
+        </transformParameter>
+      </transformParameters>
+      <transformFields />
+    </transformDefinition>
+    <transformDefinition>
+      <name>Custom</name>
+      <script>if (row.get('Name') == '')
+{
+        row.set('Name', 'NULL')
+   
+}
+ 
+if (row.get('MiddleName') == '')
+{
+        row.set('MiddleName', 'NULL')
+   
+}
+ 
+ 
+if (row.get('LastName') == '')
+{
+        row.set('LastName', 'NULL')
+   
+}
+ 
+ 
+if (row.get('FirstName') == '')
+{
+        row.set('FirstName', 'NULL')
+   
+}
+if (row.get('FirmName') == '')
+{
+        row.set('FirmName', 'NULL')
+   
+}</script>
+      <transformParameters>
+        <transformParameter>
+          <name>transformName</name>
+          <type>string</type>
+          <value>Custom Transform</value>
+        </transformParameter>
+      </transformParameters>
+      <transformFields />
+    </transformDefinition>
+  </transformDefinitions>
+</TransformerSettings>]]></settings><input_ports><input_port id="d70855f7-a1ec-4386-80ba-1fac260c6d45"><channel idref="e17beada-6167-4cf3-b8ca-bc36e7c3b789"/><label>input_port</label><port_name>input_port</port_name></input_port></input_ports><options/><output_ports><output_port id="1298ad01-e7c5-475d-93bb-810c275bf861"><channel idref="c7375bad-ef14-45d5-94e9-80873a185ae4"/><label>output_port</label><port_name>output_port</port_name></output_port></output_ports><properties><property><name>ViewData</name><value/></property><property><name>stageItemName</name><value><![CDATA[transformer]]></value></property></properties></stage></stages><reports/><notifications/><dataflow_options/><type>2</type><vendor/></dataflow></exportedDataflow>
